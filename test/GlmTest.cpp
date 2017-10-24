@@ -3,10 +3,11 @@
 
 #include <glm/vec2.hpp>
 #include <glm/vec4.hpp>
+#include <glm/gtc/type_aligned.hpp>
+#include <glm/gtc/constants.inl>
+
 #include <catch.hpp>
 #include "TestUtils.hpp"
-#include "glm/gtc/type_aligned.hpp"
-#include "glm/gtc/constants.inl"
 
 TEST_CASE("hello GLM")
 {
@@ -21,5 +22,4 @@ TEST_CASE("hello GLM")
     auto c = a + b;
 
     REQUIRE(c == glm::vec2(4, 6));
-    FAIL();
 }
