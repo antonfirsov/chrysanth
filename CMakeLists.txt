@@ -9,8 +9,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	add_definitions(" -std=c++14")
 endif()
 
-add_subdirectory(chrys)
-add_subdirectory(test)
-
 include_directories("${PROJECT_SOURCE_DIR}")
 include_directories(external)
+
+add_subdirectory(test)

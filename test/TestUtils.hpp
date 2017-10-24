@@ -2,9 +2,10 @@
 
 #include <glm/vec2.hpp>
 #include <glm/vec4.hpp>
+#include <glm/gtc/type_aligned.hpp>
+//#include "geom/VectorTraits.hpp"
+
 #include "catch.hpp"
-#include "glm/gtc/type_aligned.hpp"
-#include "geom/VectorTraits.hpp"
 
 namespace Catch {
     template<> 
