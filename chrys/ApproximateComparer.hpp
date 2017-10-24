@@ -1,11 +1,10 @@
 #pragma once
 
 #include <cmath>
-#include "glm/gtc/constants.inl"
+#include <glm/gtc/constants.hpp>
 
-namespace mums
+namespace chrys
 {
-
     template<typename _TScalar>
     class ApproximateComparer
     {
@@ -129,10 +128,10 @@ namespace mums
         //}
 
         //std::ostream& Print(std::ostream& s) const
-        friend std::ostream& operator <<(std::ostream& s, const ApproximateComparer& apx)
+        /*friend std::ostream& operator <<(std::ostream& s, const ApproximateComparer& apx)
         {
             return s << "(eps=" << apx._eps << ")";
-        }
+        }*/
 
         //bool Horizontal(const LineSegment<TScalar, 2>& l) const
         //{

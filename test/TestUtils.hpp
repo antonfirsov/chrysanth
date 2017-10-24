@@ -3,11 +3,12 @@
 #include <glm/vec2.hpp>
 #include <glm/vec4.hpp>
 #include <glm/gtc/type_aligned.hpp>
-//#include "geom/VectorTraits.hpp"
+#include <chrys/VectorTraits.hpp>
 
 #include "catch.hpp"
 
-namespace Catch {
+namespace Catch 
+{
     template<> 
     struct StringMaker<glm::vec2> 
     {
@@ -18,7 +19,6 @@ namespace Catch {
         }
     };
 
-/*
     namespace detail
     {
         template<class T, typename Enabler = void>
@@ -27,7 +27,7 @@ namespace Catch {
             static std::string convert(T const& v) {
                 std::ostringstream s;
                 s << '(';
-                for (int i=0;i<mums::VectorTraits<T>::Dim();i++)
+                for (int i=0;i<chrys::VectorTraits<T>::Dim();i++)
                 {
                     s << v[i];
                     if (i < T::length() - 1) s << ',';
@@ -46,11 +46,10 @@ namespace Catch {
     >
     struct StringMaker<TVector<L, T, Q>> : detail::VectorStringMakerBase<
         TVector<L, T, Q>,
-        typename std::enable_if<::mums::VectorTraits<TVector<L, T, Q>>::IsVector>::type
+        typename std::enable_if<chrys::VectorTraits<TVector<L, T, Q>>::IsVector>::type
     >
     {
     };
-*/  
 }
 
 namespace chrys

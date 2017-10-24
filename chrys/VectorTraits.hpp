@@ -2,7 +2,7 @@
 #include "glm/glm.hpp"
 #include "glm/vec4.hpp"
 
-namespace mums
+namespace chrys
 {
     template<typename T, typename Enabler = void>
     struct VectorTraits
