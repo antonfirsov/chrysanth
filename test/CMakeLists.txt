@@ -1,0 +1,1 @@
+add_executable(chrys-test Main.cpp GlmTest.cpp)
