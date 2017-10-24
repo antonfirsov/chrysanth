@@ -1,1 +1,1 @@
-add_executable(chrys-test Main.cpp GlmTest.cpp)
+add_executable(chrys-test Main.cpp GlmTest.cpp VectorTraitsTests.cpp)
