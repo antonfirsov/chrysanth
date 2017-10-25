@@ -2,6 +2,7 @@
 
 #include <cmath>
 #include <glm/gtc/constants.hpp>
+#include "VectorTraits.hpp"
 
 namespace chrys
 {
