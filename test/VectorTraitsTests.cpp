@@ -37,6 +37,11 @@ namespace chrys
                 static_assert(VectorTraits<glm::vec4>::IsVectorOfDim(3) == false, ":(");
                 static_assert(VectorTraits<glm::aligned_dvec3>::IsVectorOfDim(3) == true, ":(");
             }
+
+            SECTION("IfVector")
+            {
+                static_assert(SameTypes<IfVector<glm::vec4, long>, long>, ":(");
+            }
         }
     }
 }

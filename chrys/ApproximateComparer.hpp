@@ -53,6 +53,13 @@ namespace chrys
         {
             return d > _negEps && d < _eps;
         }
+
+        template<typename TVector>
+        bool Zero(const TVector& v) const
+        {
+            TScalar squaredLength = glm::dot(v, v);
+            return squaredLength < _eps2;
+        }
 /*
         inline bool Zero(const TVEC2(TScalar)& v)
         {

@@ -44,4 +44,7 @@ namespace chrys
             return Dim() == dim;
         }
     };
+
+    template<typename TVector, typename TOut>
+    using IfVector = typename std::enable_if<VectorTraits<TVector>::IsVector, TOut>::type;
 }
