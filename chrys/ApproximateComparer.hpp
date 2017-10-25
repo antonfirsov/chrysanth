@@ -3,6 +3,8 @@
 #include <cmath>
 #include <glm/gtc/constants.hpp>
 #include "VectorTraits.hpp"
+#include <exception>
+#include <stdexcept>
 
 namespace chrys
 {
@@ -33,6 +35,7 @@ namespace chrys
             _eps15(std::pow(eps, static_cast<TScalar>(1.5))),
             _negEps15(-_eps15)
         {
+            if (eps < 0) throw std::invalid_argument("eps");
         }
         
         ApproximateComparer() : ApproximateComparer(DefaultEps())
@@ -61,21 +64,6 @@ namespace chrys
             TScalar squaredLength = glm::dot(v, v);
             return squaredLength < _eps2;
         }
-/*
-        inline bool Zero(const TVEC2(TScalar)& v)
-        {
-            return Zero(v.x) && Zero(v.y);
-        }
-
-        inline bool Zero(const TVEC3(TScalar)& v)
-        {
-            return Zero(v.x) && Zero(v.y) && Zero(v.z);
-        }
-
-        inline bool Zero2(const TScalar d) const
-        {
-            return d > _negEps2 && d < _eps2;
-        }*/
 
         bool Equals(const TScalar a, const TScalar b) const
         {
